@@ -1,0 +1,28 @@
+name: V2EX Daily Mission
+
+on:
+  schedule:
+    - cron: '30 0 * * *'  # UTC 时间 00:30 (北京时间 8:30)
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests beautifulsoup4
+
+    - name: Run script
+      env:
+        V2EX_COOKIE: ${{ secrets.V2EX_COOKIE }}
+      run: python v2ex-checkin.py
