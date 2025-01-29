@@ -26,7 +26,7 @@ def main():
         soup = BeautifulSoup(response.text, 'html.parser')
         button = soup.find('input', {
             'class': 'super normal button',
-            'value': re.compile(r'领取 \d+ 铜币')
+            'value': re.compile(r'领取 X 铜币')
         })
 
         # Print current login user name
