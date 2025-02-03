@@ -2,7 +2,7 @@ name: V2EX Daily Mission
 
 on:
   schedule:
-    - cron: '30 0 * * *'  # UTC 时间 00:30 (北京时间 8:30)
+    - cron: '30 */4 * * *'
   workflow_dispatch:
 
 jobs:
