@@ -22,7 +22,12 @@ jobs:
         python3 -m pip install --upgrade pip
         pip install requests beautifulsoup4
 
-    - name: Run script
+    - name: Run checkin script
       env:
         V2EX_COOKIE: ${{ secrets.V2EX_COOKIE }}
       run: python3 v2ex-checkin.py
+
+    - name: Run patrol script
+      env:
+        V2EX_COOKIE: ${{ secrets.V2EX_COOKIE }}
+      run: python3 v2ex-patrol.py
