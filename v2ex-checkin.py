@@ -5,7 +5,7 @@ import re
 
 # 配置信息
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36',
     'Cookie': os.environ.get('V2EX_COOKIE', ''),
 }
 MISSION_URL = 'https://v2ex.com/mission/daily'
